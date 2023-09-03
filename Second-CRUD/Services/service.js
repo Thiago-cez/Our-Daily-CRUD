@@ -6,8 +6,12 @@ let id = 1;
 
 
 function cadastrar(nome, tipo, raca, cor, idade, peso, altura){
-    if( validacaoAnimais.verificacao <= 0){
-        return verificacao;
+    let cad = {nome, tipo, raca, cor, idade, peso, altura}
+    
+    let verificador = validacaoAnimais.verificacao(cad, animais )
+
+    if( verificador.length > 0){
+        return verificador;
     }else {
         let cadastro = {
             nome, 
@@ -23,6 +27,7 @@ function cadastrar(nome, tipo, raca, cor, idade, peso, altura){
         return cadastro
     }
 }
+
 
 
 

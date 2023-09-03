@@ -5,37 +5,37 @@ function verificacao(objeto, arrey){
         alertas.push("Pet ja Cadastrado")
     }
 
-  
 
-    if(objeto.nome.indexOf() >= 0){
-        alertas.push("campo vazio ou nao é permitido espaçamentos")
+    if(objeto.nome.includes(' ')){
+        alertas.push("Campo Nome => nao é permitido espaçamentos ou campo vazio")
     }
 
-    if(objeto.tipo.indexOf() >= 0){
-        alertas.push("campo vazio ou nao é permitido espaçamentos")
+    if(objeto.tipo.includes(' ')){
+        alertas.push("Campo tipo => nao é permitido espaçamentos ou campo vazio")
     }
 
-    if(objeto.raca.indexOf() >= 0){
-        alertas.push("campo vazio ou nao é permitido espaçamentos")
+    if(objeto.raca.includes(' ')){
+        alertas.push("Campo raça => nao é permitido espaçamentos ou campo vazio")
     }
 
-    if(objeto.cor.indexOf() >= 0){
-        alertas.push("campo vazio ou nao é permitido espaçamentos")
+    if(objeto.cor.includes(' ')){
+        alertas.push("Campo cor =>  nao é permitido espaçamentos ou campo vazio")
+    }
+    
+    if(objeto.idade == null || objeto.idade == undefined || isNaN(objeto.idade)) {
+        alertas.push("Campo idade => não é permitido espaçamentos ou campos vazios ou não é um número válido");
     }
 
-   
-    if(objeto.idade.indexOf() >= 0){
-        alertas.push("campo vazio ou nao é permitido espaçamentos")
+    if(objeto.altura == null || objeto.altura == undefined || isNaN(objeto.altura)) {
+        alertas.push("Campo altura => não é permitido espaçamentos ou campos vazios ou não é um número válido");
+    }
+    
+    if(objeto.peso == null || objeto.peso == undefined || isNaN(objeto.peso)) {
+        alertas.push("Campo peso => não é permitido espaçamentos ou campos vazios ou não é um número válido");
     }
 
-    if(objeto.peso.indexOf() >= 0){
-        alertas.push("campo vazio ou nao é permitido espaçamentos")
-    }
 
-    if(objeto.altura.indexOf() >= 0){
-        alertas.push("campo vazio ou nao é permitido espaçamentos")
-    }
-
+    
 
 
 
