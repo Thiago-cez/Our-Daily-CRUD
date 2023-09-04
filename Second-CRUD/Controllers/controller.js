@@ -15,6 +15,17 @@ function novoCadastro(req, res){
     res.json(nc)
 }
 
+function listarPets(req, res){
+    res.json(cadastrarService.listar())
+}
+
+
+
+
+
+
+
 module.exports = {
-    novoCadastro
+    novoCadastro,
+    listarPets
 }

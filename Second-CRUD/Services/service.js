@@ -14,6 +14,7 @@ function cadastrar(nome, tipo, raca, cor, idade, peso, altura){
         return verificador;
     }else {
         let cadastro = {
+            id,
             nome, 
             tipo,
             raca,
@@ -28,9 +29,48 @@ function cadastrar(nome, tipo, raca, cor, idade, peso, altura){
     }
 }
 
+function listar() {
+    return (animais)
+}
+
+function editar(
+        id,
+        nome, 
+        tipo,
+        raca,
+        cor, 
+        idade,
+        peso,
+        altura
+    ) {
+    let index = animais.findIndex( u => u.id == id);
+
+    let objEncontrado = animais[index]
+
+    objEncontrado.nome = nome;
+    objEncontrado.tipo = tipo;
+    objEncontrado.raca = raca
+    objEncontrado.cor = cor;
+    objEncontrado.idade = idade;
+    objEncontrado.peso = peso;
+    objEncontrado.altura = altura;
+
+
+    return objEncontrado
+}
+
+
+
+
+
+
+
+
 
 
 
 module.exports = {
-    cadastrar
+    cadastrar,
+    listar,
+    editar
 }
