@@ -59,6 +59,16 @@ function editar(
     return objEncontrado
 }
 
+function deletar(id) {
+    let index = animais.findIndex( u => u.id == id)
+
+    if(index !== -1){
+        animais.splice(index, 1)
+        return "Usuario excluido com Sucesso"
+    } else {
+        return "Usuario nao encontrado"
+    }
+}
 
 
 
@@ -72,5 +82,6 @@ function editar(
 module.exports = {
     cadastrar,
     listar,
-    editar
+    editar,
+    deletar
 }

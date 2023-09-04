@@ -19,6 +19,29 @@ function listarPets(req, res){
     res.json(cadastrarService.listar())
 }
 
+function editar(req, res){
+    let id = req.body.id;
+    let nome = req.body.nome
+    let tipo = req.body.tipo
+    let raca = req.body.raca
+    let cor = req.body.cor
+    let idade = req.body.idade
+    let peso = req.body.peso
+    let altura = req.body.altura 
+
+    let a = cadastrarService.editar(id, nome, tipo, raca, cor, idade, peso, altura);
+
+    res.json(a)
+}
+
+function excluir(req, res) {
+      let id = req.body.id;
+
+      let d = cadastrarService.deletar(id);
+
+      res.send(d);
+}
+
 
 
 
@@ -27,5 +50,7 @@ function listarPets(req, res){
 
 module.exports = {
     novoCadastro,
-    listarPets
+    listarPets,
+    editar,
+    excluir
 }
