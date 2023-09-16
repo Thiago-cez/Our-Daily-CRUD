@@ -1,17 +1,21 @@
 const User = require('../model/User')
 
 
-function cadastrar(nome, empresa, sexo, idade, admin) {
+async function cadastrar(nome, empresa, sexo, idade, admin) {
 
     const novoUsuario = new User({nome, empresa, sexo, idade, admin })
 
-    novoUsuario.save()
+    await novoUsuario.save()
 
     .then(() => {
         return "Cadastrado com Sucesso!"
     })
     .catch((error) => error);
 
+}
+
+async function listar() {
+  return await User.find({})
 }
 
 
@@ -21,5 +25,6 @@ function cadastrar(nome, empresa, sexo, idade, admin) {
 
 
 module.exports = {
-    cadastrar
+    cadastrar,
+    listar
 }

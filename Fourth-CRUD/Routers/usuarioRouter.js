@@ -5,6 +5,7 @@ const router = express.Router();
 
 
 router.post('/cadastrar',controllerUser.cad);
+router.get('/listar', controllerUser.list);
 
 
 

@@ -19,7 +19,14 @@ async function cad( req,res ){
     res.json(nc);
 }
 
+async function list(req, res) {
+   res.json(await userService.listar());
+
+
+}
+
 
 module.exports = {
-    cad
+    cad,
+    list
 }
