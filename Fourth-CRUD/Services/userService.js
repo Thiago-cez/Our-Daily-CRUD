@@ -19,6 +19,20 @@ async function listar() {
 }
 
 
+async function editar(id,nome, empresa, sexo, idade, admin){
+  await User.findByIdAndUpdate(id, {nome, empresa, sexo, idade, admin})
+
+  return "Auterado co Sucesso!!"
+}
+
+async function deletar(id){
+    
+    await User.findByIdAndDelete(id)
+
+    return "Excluido com Sucesso"
+}
+
+
 
 
 
@@ -26,5 +40,7 @@ async function listar() {
 
 module.exports = {
     cadastrar,
-    listar
+    listar,
+    editar,
+    deletar
 }

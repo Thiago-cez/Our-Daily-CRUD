@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const UsuarioRotas = require('./Routers/usuarioRouter')
+const UsuarioRotas = require('./Routers/usuarioRouter');
+const produtoRotas = require('./Routers/produtoRouter')
 
 const port = 3000;
 
@@ -10,6 +11,7 @@ app.use(express.json());
 
 
 app.use('/usuario', UsuarioRotas.router);
+app.use('/produto', produtoRotas.routerP)
 
 
 
