@@ -11,14 +11,7 @@ app.use(express.json());
 
 
 app.use('/usuario', UsuarioRotas.router);
-app.use('/produto', produtoRotas.routerP)
-
-
-
-
-//Conecta Com o Banco de Dados
-const connectionString ="mongodb+srv://jao:QZLxjey44YjIBhFl@cluster0.p9pacqw.mongodb.net/?retryWrites=true&w=majority";
-mongoose.connect(connectionString);
+app.use('/produto', produtoRotas.routerP);
 
 
 

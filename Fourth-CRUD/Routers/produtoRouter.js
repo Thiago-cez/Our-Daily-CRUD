@@ -1,11 +1,12 @@
-const produtoController = require('../Controllers/produtoController');
+const cadastrar = require('../Controllers/produtoController/cadastrar');
+const listar = require('../Controllers/produtoController/listar');
 const express = require('express')
 
 const routerP = express.Router()
 
 
-routerP.post('/cadastrar', produtoController.cadastrar);
-routerP.get('/listar', produtoController.list)
+routerP.post('/cadastrar', cadastrar.cadastrar);
+routerP.get('/listar', listar.list)
 
 
 

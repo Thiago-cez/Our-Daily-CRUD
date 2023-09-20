@@ -1,13 +1,16 @@
 const express = require('express');
-const controllerUser = require('../Controllers/userController');
+const cadastrar = require('../Controllers/UserController/Cadastrar');
+const listar = require('../Controllers/UserController/listar');
+const editar = require('../Controllers/UserController/editar');
+const deletar = require('../Controllers/UserController/deletar');
 const router = express.Router();
 
 
 
-router.post('/cadastrar',controllerUser.cad);
-router.get('/listar', controllerUser.list);
-router.put('/editar', controllerUser.edit);
-router.delete('/deletar', controllerUser.del)
+router.post('/cadastrar',cadastrar.cad);
+router.get('/listar', listar.list);
+router.put('/editar', editar.edit);
+router.delete('/deletar', deletar.del)
 
 
 

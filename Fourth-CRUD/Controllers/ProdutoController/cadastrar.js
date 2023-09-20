@@ -1,4 +1,4 @@
-const pService = require("../Services/produtoService");
+const pService = require("../../Services/produtoService/cadastrar");
 
 
 async function cadastrar(req,res){
@@ -17,14 +17,9 @@ async function cadastrar(req,res){
 }
 
 
-async function list(req, res){
- res.json(await pService.listar())
-}
-
 
 
 
 module.exports = {
-    cadastrar,
-    list
+    cadastrar
 }

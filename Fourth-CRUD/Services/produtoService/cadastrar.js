@@ -1,4 +1,4 @@
-const Produto = require('../model/Produto');
+const Produto = require('../../DataBase/model/Produto');
 
 
 async function cadastro(marca,modelo,ano,preco) {
@@ -10,13 +10,9 @@ let novoProduto = new Produto({marca, modelo, ano, preco })
 }
 
 
-async function listar(){
-    return await Produto.find({})
-}
 
 
 
 module.exports = {
-    cadastro,
-    listar
+    cadastro
 }
