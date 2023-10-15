@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { connectionString } = require('../config/config');
 
 async function User() {
-    await connectionString();
+    await mongoose.connect(connectionString);
     
     return mongoose.model('user', {
         nome: String,

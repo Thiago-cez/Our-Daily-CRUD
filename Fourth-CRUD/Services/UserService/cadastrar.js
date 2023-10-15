@@ -1,18 +1,19 @@
 
-const User = require('../../DataBase/model/User')
+const User = require('../../DataBase/model/User')()
 
 
 async function cadastrar(nome, empresa, sexo, idade, admin) {
 
     const novoUsuario = new User({nome, empresa, sexo, idade, admin });
 
-    await novoUsuario.save()
+    try {
+        await novoUsuario.save();
+        
+        return "Cadastrado com Sucesso!";
 
-    .then(() => {
-        return "Cadastrado com Sucesso!"
-    })
-    .catch((error) => error);
-
+    } catch (error) {
+        return error; // You can return the error object if there's an issue.
+    }
 }
 
 
