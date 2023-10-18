@@ -10,6 +10,6 @@ const connectionString =
 
 
 app.listen( port , () => {
-    console.log(`Servidor Rodando na porta ${port}`)
+    console.log(`Servidor Rodando na porta: ${port}`)
 })
 
