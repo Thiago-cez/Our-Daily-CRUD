@@ -19,5 +19,5 @@ app.use('/anuncio', rotasAnuncios.router);
 
 
 app.listen(port, () => {
-    console.log(`Servidor Rodando na porta: ${3000}`)
+    console.log(`Servidor Rodando na porta:  ${3000}`)
 })
