@@ -9,7 +9,7 @@ app.use(express.json())
 const connectionString = 
 
 
-app.listen( port , () => {
+app.listen(port,() => {
     console.log(`Servidor Rodando na porta: ${port}`)
 })
 
